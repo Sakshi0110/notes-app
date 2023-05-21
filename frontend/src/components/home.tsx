@@ -11,7 +11,7 @@ function Home() {
     return (
         <div className="container">
             <div className="row m-3">
-                <NewNote />
+                <NewNote notes={notes} setNotes={setNotes} />
             </div>
             <div className="row m-3">
                 {cards}
