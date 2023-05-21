@@ -1,20 +1,20 @@
 import Card from "../widgets/card";
+import NewNote from "../widgets/new_note";
+import { useState } from "react";
 
 function Home() {
+    const [notes, setNotes] = useState([]);
+    let cards = [];
+    for (let note of notes) {
+        cards.push(<Card text={note} />);
+    }
     return (
         <div className="container">
             <div className="row m-3">
-                <div className="form-floating col">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label htmlFor="floatingTextarea">Enter your note</label>
-                </div>
-                <div className="col-1">
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </div>
+                <NewNote />
             </div>
             <div className="row m-3">
-                <Card />
-                <Card />
+                {cards}
             </div>
         </div>
     )

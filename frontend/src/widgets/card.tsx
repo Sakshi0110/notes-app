@@ -1,9 +1,9 @@
-function Card() {
+function Card(props: { text: string }) {
     return (
         <div className="w-50 p-2">
             <div className="card">
                 <div className="card-body">
-                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p className="card-text">{props.text}</p>
                     <a className="btn btn-primary">Button</a>
                 </div>
             </div>
